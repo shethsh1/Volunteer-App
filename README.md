@@ -163,7 +163,7 @@ their homes by giving a free service for other volunteers to assist them.
     * given account info will add an account into the database
     * Request Body expects (with same data type as example below):
     * Status must either be Admin, Volunteer, or User. This was not checked.
-    <pre>
+    ```javascript
    {
        "username": "test1",
        "password": "test1",
@@ -174,9 +174,9 @@ their homes by giving a free service for other volunteers to assist them.
        "age": 20,
        "gender": "Male"
    }
-    </pre>
+    ```
    * Returned JSON should be the database document added (with passwords hashed and image set to default).
-   <pre>
+   ```javascript
    {
        "_id": "5f3773683cbb6d40042e19fa",
        "username": "test1",
@@ -191,33 +191,33 @@ their homes by giving a free service for other volunteers to assist them.
        "__v": 0
    }
    
-   </pre>
+   ```
    
 [back to top](#table-of-contents)
    
 * http://localhost:5000/users/login
     * Given username and password returns currentUser id and status and sets cookie, if fails sends 401 status response
     * Request body expects:
-    <pre>
+    ```javascript
    {
        "username": "test1",
        "password": "test1"
    }
-    </pre>
+    ```
    * Returned JSON should be the userId and status of given user
-   <pre>
+   ```javascript
    {
        "currentUser": "5f3773683cbb6d40042e19fa",
        "status": "Admin"
    }
-   </pre>
+   ```
    
 [back to top](#table-of-contents)
    
 * http://localhost:5000/users/posts
     * Given post details returns json of post database document created
     * Request body expects (NOTE: author is the userId)
-    <pre>
+    ```javascript
    {
        "_id": "5f377a379a855640ec9c7342",
        "author": "5f3773683cbb6d40042e19fa",
@@ -233,9 +233,9 @@ their homes by giving a free service for other volunteers to assist them.
        "__v": 0
    }
     
-    </pre>
+    ```
     * Returned JSON should be the database document added.
-    <pre>
+    ```javascript
    {
        "_id": "5f377a379a855640ec9c7342",
        "author": "5f3773683cbb6d40042e19fa",
@@ -250,7 +250,7 @@ their homes by giving a free service for other volunteers to assist them.
        "creationDate": "Aug 15 2020",
        "__v": 0
    }
-    </pre>
+    ```
     
 [back to top](#table-of-contents)
 
@@ -258,14 +258,14 @@ their homes by giving a free service for other volunteers to assist them.
      * Given postId you can write a comment to a post
      * Request Body expects - (url has params "id" that refers to postId )
      * http://localhost:5000/users/posts/5f377a379a855640ec9c7342
-    <pre>
+    ```javascript
    {
        "userId": "5f3773683cbb6d40042e19fa",
        "detail": "insert a comment here"
    }
-    </pre>
+    ```
     * Returned JSON should be the comment document added to the database and the comment.
-    <pre>
+    ```javascript
    {
        "comment": {
            "userId": "5f3773683cbb6d40042e19fa",
@@ -293,7 +293,7 @@ their homes by giving a free service for other volunteers to assist them.
            "__v": 0
        }
    }
-    </pre>
+    ```
     
 [back to top](#table-of-contents)
 
@@ -301,14 +301,14 @@ their homes by giving a free service for other volunteers to assist them.
     * Given comment id and post id return a reply to a specific comment
     * using the above comment http://localhost:5000/users/posts/reply/5f377a379a855640ec9c7342/5f377b9b9a855640ec9c7343
     * Request body expects (author is the userId):
-    <pre>
+    ```javascript
    {
        "userId": "5f3773683cbb6d40042e19fa",
        "detail": "child comment"
    }
-    </pre>
+    ```
    * Returned JSON should be the nested post tree that we saw before but now with a response to a comment
-   <pre>
+   ```javascript
    {
        "_id": "5f377a379a855640ec9c7342",
        "author": "5f3773683cbb6d40042e19fa",
@@ -337,7 +337,7 @@ their homes by giving a free service for other volunteers to assist them.
        "creationDate": "Aug 15 2020",
        "__v": 1
    }
-   </pre>
+   ```
     
 [back to top](#table-of-contents)
 
@@ -345,7 +345,7 @@ their homes by giving a free service for other volunteers to assist them.
    
 * http://localhost:5000/users
     * Returns a list of users
-    <pre>
+    ```javascript
     [{
         "_id": "5f3773683cbb6d40042e19fa",
         "username": "test1",
@@ -359,14 +359,14 @@ their homes by giving a free service for other volunteers to assist them.
         "image": "https://res.cloudinary.com/dzuvioe6w/image/upload/v1597279271/nri7mjuk/xushpnkikvrmkhry5gic.png",
         "__v": 0
     }]
-    </pre>
+    ```
     
 [back to top](#table-of-contents)
 
 * http://localhost:5000/users/profile/:id
     * given userId in url returns a json document of the user
     * e.g. http://localhost:5000/users/profile/5f3773683cbb6d40042e19fa
-    <pre>
+    ```javascript
    {
        "_id": "5f3773683cbb6d40042e19fa",
        "username": "test1",
@@ -380,18 +380,18 @@ their homes by giving a free service for other volunteers to assist them.
        "image": "https://res.cloudinary.com/dzuvioe6w/image/upload/v1597279271/nri7mjuk/xushpnkikvrmkhry5gic.png",
        "__v": 0
    }
-    </pre>
+    ```
     
 [back to top](#table-of-contents)
 
 * http://localhost:5000/users/check-session
     * Sees if there is a session cookie currently saved
     * if yes returns the current user else status 401
-    <pre>
+    ```javascript
    {
        "currentUser": "5f3773683cbb6d40042e19fa"
    }
-    </pre>
+    ```
     
 [back to top](#table-of-contents)
     
@@ -402,7 +402,7 @@ their homes by giving a free service for other volunteers to assist them.
 * http://localhost:5000/users/posts/:id
     * given post id returns a json document of a post and all its comments. Also adds usernames images and other info to each comment
     * e.g. http://localhost:5000/users/posts/5f377a379a855640ec9c7342
-    <pre>
+    ```javascript
    {
        "_id": "5f377a379a855640ec9c7342",
        "author": "5f3773683cbb6d40042e19fa",
@@ -437,7 +437,7 @@ their homes by giving a free service for other volunteers to assist them.
        "status": "Admin",
        "image": "https://res.cloudinary.com/dzuvioe6w/image/upload/v1597279271/nri7mjuk/xushpnkikvrmkhry5gic.png"
    }
-    </pre>
+    ```
     
 [back to top](#table-of-contents)
     
@@ -452,13 +452,13 @@ their homes by giving a free service for other volunteers to assist them.
 * http://localhost:5000/users/profile/:id
     * given userId and request body with user elements you can edit them and it will return the editted json document
     * For example, 5f3773683cbb6d40042e19fa Request body:
-    <pre>
+    ```javascript
    {
        "age": 21
    }
-    </pre>
+    ```
    * Returns the users updated json document
-   <pre>
+   ```javascript
    {
        "_id": "5f3773683cbb6d40042e19fa",
        "username": "test1",
@@ -472,20 +472,20 @@ their homes by giving a free service for other volunteers to assist them.
        "image": "https://res.cloudinary.com/dzuvioe6w/image/upload/v1597279271/nri7mjuk/xushpnkikvrmkhry5gic.png",
        "__v": 0
    }
-   </pre>
+   ```
    
 [back to top](#table-of-contents)
     
 * http://localhost:5000/users/posts/:id 
     * Given post id and a request body of the part of the post you want to edit, it will then return the updated post
     * e.g. http://localhost:5000/users/posts/5f377a379a855640ec9c7342 and requestbody:
-    <pre>
+    ```javascript
    {
        "resolved": true
    }
-    </pre>
+    ```
    * returned updated json document of the post
-   <pre>
+   ```javascript
    {
        "_id": "5f377a379a855640ec9c7342",
        "author": "5f3773683cbb6d40042e19fa",
@@ -500,7 +500,7 @@ their homes by giving a free service for other volunteers to assist them.
        "creationDate": "Aug 15 2020",
        "__v": 2
    }
-   </pre>
+   ```
    
 [back to top](#table-of-contents)
 
@@ -510,7 +510,7 @@ their homes by giving a free service for other volunteers to assist them.
   * given user id removes the user from the database and returns the removed user and if user not found returns 404 error additionally removes all the posts of the user. 404 if not found
   * e.g. http://localhost:5000/users/profile/5f3773683cbb6d40042e19fa
   * returns
-  <pre>
+  ```javascript
    {
        "_id": "5f3773683cbb6d40042e19fa",
        "username": "test1",
@@ -524,7 +524,7 @@ their homes by giving a free service for other volunteers to assist them.
        "image": "https://res.cloudinary.com/dzuvioe6w/image/upload/v1597279271/nri7mjuk/xushpnkikvrmkhry5gic.png",
        "__v": 0
    }
-  </pre>
+  ```
         
 * http://localhost:5000/users/posts/:id
     * give post id removes the post and returns it. if post not found returns 404 id. 
