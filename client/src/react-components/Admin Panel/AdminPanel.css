@@ -1,0 +1,152 @@
+.content {
+    margin-left: 325px;
+    border: 0.5rem solid  #77C9D4;
+
+    min-width: 80%;
+
+    height: 95%;
+    margin-top: 10px;
+    position: absolute;
+    overflow: auto;
+
+}
+
+.adminText {
+    font-size: 50px;
+    color: green;
+
+
+
+}
+
+.title {
+
+    text-align: center;
+    background: #80808087;
+    
+}
+
+#adminTable {
+    margin-left:auto; 
+    margin-right:auto;
+    border-spacing: 0px;
+}
+
+#adminTable th, #adminTable td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 0;
+    padding: 5px;
+
+
+}
+
+#adminTable tr {
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+}
+
+
+.update {
+    background-color: blue; 
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+
+
+}
+
+.deleteAdmin {
+    background-color: red; 
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    
+
+
+}
+
+.add {
+    background-color: green; 
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+
+.viewAllPosts {
+    background-color: antiquewhite; 
+    padding: 15px 30px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+
+.updateTitle {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: -30px;
+}
+
+.updateFormContainer {
+
+    border: 1px solid black;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    padding: 50px;
+}
+
+
+.MuiFormControl-root {
+    width: 100%;
+}
+
+
+
+.updateFormButtons {
+    margin: auto !important;
+    margin-top: 25px !important;
+}
+
+.errorUpdateMessage {
+    color: red;
+    text-align: center;
+}
+
+#updateForm {
+    padding: 25px !important;
+}

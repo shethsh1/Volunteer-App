@@ -1,0 +1,143 @@
+
+
+
+.content {
+    margin-left: 325px;
+    border: 0.5rem solid  #77C9D4;
+
+    min-width: 80%;
+
+    height: 95%;
+    margin-top: 10px;
+    position: absolute;
+    overflow: auto;
+
+
+}
+
+.profileBackground {
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 150px;
+    width: 150px;
+
+}
+
+.profilePicture {
+    border-radius: 50%;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    bottom: 15px;
+    border: solid 5px white;
+
+}
+
+.profileLine {
+
+    height: 30px;
+}
+
+.basicInfo {
+    border: 0.1rem solid #ccc;
+    height: 50px;
+    width: 40%;
+    margin-left: 25px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+
+    
+    
+}
+
+
+
+.left {
+    float:left;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+
+
+}
+
+.right {
+    float:right;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.editProfile {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+
+    border-radius: 50%;
+    bottom: 120px;
+    left: 100px;
+    
+
+    cursor: pointer;
+}
+
+
+.editPencil {
+    height: 50px;
+    width: 50px;
+
+
+    border-radius: 50%;
+    float: right;
+
+    cursor: pointer;
+}
+
+.editPencilH {
+    height: 50px;
+    width: 50px;
+
+
+    border-radius: 50%;
+    float: right;
+
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.viewPost {
+    background-color: antiquewhite; 
+    padding: 15px 30px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+
+    
+
+}
+
+.rightInput {
+    float:right;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: right;
+    width: auto;
+
+}
+
+.basicInfo , ::after, ::before {
+    box-sizing: content-box !important;
+}

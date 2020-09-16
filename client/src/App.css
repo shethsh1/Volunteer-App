@@ -1,0 +1,11 @@
+html {
+  height: 100%;
+  background: red;
+}
+
+body {
+  color: darkslategrey;
+  background: red;
+  margin: 40px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}

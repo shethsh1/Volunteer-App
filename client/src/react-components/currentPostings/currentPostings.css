@@ -1,0 +1,211 @@
+body{
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.header{
+    text-align: center;
+}
+
+
+.post {
+    
+    background-color: white;
+    min-height: 100px;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    margin: 50px;
+    background: #88B04B;
+    overflow: auto;
+
+
+}
+
+
+
+.postIconContainer {
+
+	width: 80px;
+    float: left;
+}
+
+
+.postIcon {
+
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.postIconContainer h5{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    overflow: auto;
+
+}
+
+
+
+
+
+
+.buttons{
+    float: right;
+}
+
+
+
+.view {
+    margin: 5px !important
+
+
+}
+
+.deletePost {
+    background-color: red;
+    color: white;   
+    font-size: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 4px;
+    border: none;
+
+}
+
+.grey{
+    color: grey;
+
+}
+
+.Title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.use {
+    color: blue;
+    cursor: pointer;
+}
+
+.tags {
+    margin: 5px;
+}
+
+.theTags {
+    float: left;
+    
+
+}
+
+.thedate {
+    float: right;
+}
+
+
+/* searchbar stuff */
+  
+.searchbar {
+    padding: 5px 0;
+    width: 230px;
+    position: relative;
+    margin: auto;
+
+}
+
+.btn {
+    height: 30px;
+    right: -50px;
+    position: absolute;
+    
+}
+  
+.searchbar input {
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    padding: 0 2px 0 2px;
+
+}
+  
+.resolved {
+    background: green !important;
+}
+
+.advanced {
+    display: flex;
+
+    justify-content: center;
+    
+}
+
+
+
+.buttonForm {
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+
+.commentx {
+    margin-bottom: 1em;
+    border: 1px solid #999;
+    display: flex;
+    padding: 1em;
+    margin-top: 50px;
+    margin: 50px;
+    
+
+}
+
+
+
+#truepost ul .comments li ul {
+    border-left: 1px solid #999;
+    position: relative;
+}
+
+#truepost .buttonComment {
+    margin-top: 5px !important;
+    float: right;
+    width: 200px;
+}
+
+.commentx img {
+    border-radius: 50%;
+    width: 100px;
+}
+  
+#truepost .currContent {
+    padding-left: 15px;
+
+  }
+  
+#truepost .currContent p:first-child {
+    margin-top: 0;
+}
+
+#truepost .imageText {
+    text-align: center;
+    margin: 0 !important;
+}
+
+.setPads {
+
+  padding: 25px !important;
+    
+}
+
+p{
+    word-break: break-word;
+  }
+
+#truepost h3 {
+    font-weight: bold;
+}

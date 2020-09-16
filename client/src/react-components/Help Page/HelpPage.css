@@ -1,0 +1,78 @@
+
+.formContainer {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    padding: 10px;
+    margin-top: 50px;
+    border: 1px solid black;
+    padding: 25px;
+
+
+    
+}
+
+.formTitle {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.question {
+
+    display: inline-block;
+    width: 15%;
+    font-size: 20px;
+    margin-top: 10px;
+	padding-left: 260px;
+    
+}
+
+.inputText {
+    width: 35%;
+    min-height: 25px;
+    display: inline-block;
+}
+
+.description {
+    margin-top: 25px;
+    width: 35%;
+    min-height: 80px;
+}
+
+
+.textboxQuestion {
+    display: inline-block;
+    width: 15%;
+    font-size: 20px;
+    padding-left: 260px;
+    position: relative;
+    bottom: 45px;
+
+}
+
+
+.submitButton {
+    background-color: green; 
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    margin-left: 480px;
+    margin-top: 10px;
+}
+
+
+.messageForm {
+    color: green;
+    text-align: center;
+}
